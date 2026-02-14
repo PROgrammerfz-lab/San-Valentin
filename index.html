@@ -3,115 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi persona especial</title>
+    <title>Para mi persona especial ❤️</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #fff0f3; /* Fondo rosita suave */
+            background-color: #fff0f3; 
+            overflow-x: hidden;
         }
+        
+        h1, h2, h3, .fuente-romantica {
+            font-family: 'Pacifico', cursive;
+            color: #d90429;
+        }
+
         .hero-section {
-            /* CAMBIA LA URL DE ABAJO POR TU FOTO PRINCIPAL */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('principal5.jpeg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('principal5.jpeg');
             background-size: cover;
             background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 150px 0;
             text-align: center;
         }
-        .section-padding {
-            padding: 60px 0;
+
+        .hero-title {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            color: white;
         }
-        .heart-icon {
-            color: #ff4d6d;
-            font-size: 2rem;
-        }
+
+        .section-padding { padding: 80px 0; }
+        
         .card {
             border: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s;
         }
-        .card:hover {
-            transform: translateY(-5px);
+        
+        .card:hover { transform: translateY(-10px); }
+        
+        .imagen-zigzag {
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(217, 4, 41, 0.2);
+            object-fit: cover;
+            width: 100%;
+            height: 350px; 
         }
-        .accent-color {
-            color: #ff4d6d;
-            font-weight: bold;
+
+        .heart-fall {
+            position: fixed;
+            font-size: 1.2rem;
+            user-select: none;
+            pointer-events: none;
+            z-index: 9999;
+            animation: fallDown linear forwards;
+        }
+        @keyframes fallDown {
+            0% { transform: translateY(-10vh) rotate(0deg) scale(0.8); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg) scale(1.2); opacity: 0; }
         }
     </style>
 </head>
 <body>
 
     <header class="hero-section">
-        <div class="container">
-            <h1 class="display-3 fw-bold">Mi persona Favorita</h1>
-            <p class="lead fs-4">Una pequeña página web dedicada a mi hermosa novia :).</p>
+        <div class="container" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="hero-title">Feliz San Valentín</h1>
+            <p class="lead fs-3 mt-3">Para la mujer que ilumina mi vida.</p>
+            <i class="bi bi-chevron-double-down fs-1 mt-5 d-block" style="animation: bounce 2s infinite;"></i>
         </div>
     </header>
 
     <section class="section-padding container text-center">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h2 class="mb-4">Lo que siento por ella</h2>
-                <p class="lead text-muted">
-                    Lo que siento por mi novia es un amor puro y genuino, un amor que funciona como un motor que me motiva a ser un mejor hombre, a ser la persona que ella merece.
-                    Yo por ella siento algo muy especial, pues ha sido mi novia por mas de 3 años y no ha habido un dia en el que no piense en ella, es mi primer y ultimo pensamiento del dia.
-                    
+            <div class="col-md-8" data-aos="fade-up">
+                <h2>Lo que siento por ti</h2>
+                <p class="lead text-muted mt-4">
+                    Eres mi primer pensamiento al despertar y el último antes de dormir. Este amor es mi motor diario, uno tan genuino que me hace querer ser el hombre que te mereces. Un amor sin envidias, donde cada triunfo tuyo lo celebro como si fuera mío, porque verte brillar es mi mayor felicidad.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-white overflow-hidden">
         <div class="container">
-            <h2 class="text-center mb-5">Nuestra Historia <i class="bi bi-journal-bookmark-fill heart-icon"></i></h2>
-            <div class="row align-items-center g-4">
-                <div class="col-md-6 order-md-2">
-                    <img src="promocion.jpeg" class="img-fluid rounded shadow" alt="Nosotros">
+            <h2 class="text-center mb-5" data-aos="fade-down">Nuestros Momentos</h2>
+
+            <div class="row align-items-center mb-5 pb-4">
+                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="antes1.jpeg" class="imagen-zigzag" alt="Momento 1">
                 </div>
-                <div class="col-md-6 order-md-1">
-                    <div class="p-4">
-                        <h3>De la amistad al amor</h3>
-                        <p>Lo nuestro fue natural. Después de <strong>dos años de amistad</strong>, de conocernos más allá de lo superficial y sin máscaras, decidimos dar el paso.</p>
-                        <p>Hemos tenido retos y malentendidos, pero nuestro amor siempre ha sido más grande. Contigo aprendí que amar es construir, tener paciencia y hacer equipo.</p>
-                        <br>
-                        <p>En este viaje los dos hemos aprendido, hemos mejorado como persona y como pareja. Hemos hecho casi todo juntos, nos conocemos muy bien y por eso sabemos que si nosotros 
-                        estamos juntos no hay imposibles, por eso nos gusta planear y hacer planes ya que, aunque no sabemos cuando se podran lograr, sabemos que nosotros dos somos mas que capaces e imparables.</p>
-                    </div>
+                <div class="col-md-6 px-md-5" data-aos="fade-left">
+                    <h3>De amigos a compañeros de vida</h3>
+                    <p class="fs-5 text-muted">Lo nuestro fluyó de la manera más natural posible. No forzamos nada y de una amistad surgio un buen noviazgo que a pesar de los enojos, malentendidos y desafios hemos salido adelante juntos. Los dos somos un buen equipo y espero que asi lo seamos siempre.</p>
                 </div>
             </div>
+
+            <div class="row align-items-center mb-5 pb-4">
+                <div class="col-md-6 order-md-2 mb-4 mb-md-0" data-aos="fade-left">
+                    <img src="resilencia.jpeg" class="imagen-zigzag" alt="Momento 2">
+                </div>
+                <div class="col-md-6 order-md-1 px-md-5 text-md-end" data-aos="fade-right">
+                    <h3>Tú eres mi paz</h3>
+                    <p class="fs-5 text-muted">A veces ni yo mismo entiendo cómo es que un simple mensaje tuyo puede cambiarme el día por completo. Cuando no estás, siento un vacío enorme, pero basta ver una foto tuya para que mi corazón vuelva a latir igual de rápido que el día que te pedí ser mi novia.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="familia.jpeg" class="imagen-zigzag" alt="Momento 3">
+                </div>
+                <div class="col-md-6 px-md-5" data-aos="fade-left">
+                    <h3>Parte de mi familia</h3>
+                    <p class="fs-5 text-muted">No solo te ganaste mi corazón, sino el de todos en mi casa. Un plan familiar simplemente no está completo si tú no vienes con nosotros. Eres de las pocas personas con las que visualizo mi futuro en cada paso que doy.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <section class="section-padding container">
-        <h2 class="text-center mb-5">Por qué es especial <i class="bi bi-stars heart-icon"></i></h2>
+        <h2 class="text-center mb-5" data-aos="fade-up">Por qué eres única</h2>
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card h-100 text-center p-4">
+                    <img src="iglesia.jpeg" class="card-img-top rounded mb-3" alt="Resiliencia" style="height: 220px; object-fit: cover;">
                     <div class="card-body">
-                        <img src="resilencia.jpeg" alt="Vacaciones." style="height: 200px; object-fit: cover;">
-                        <h4 class="card-title">Resiliencia Pura</h4>
-                        <p class="card-text">Admiro su fuerza. A pesar de los golpes de la vida, siempre se levanta y sigues adelante. Podría lograrlo todo sola, pero me encanta que elija hacerlo conmigo.</p>
+                        <h4 class="fuente-romantica">Tu Fuerza</h4>
+                        <p class="card-text">Admiro tu resiliencia. A pesar de los golpes que te da la vida, siempre te levantas. Eres capaz de lograr todo lo que te propones sola, pero me hace inmensamente feliz que elijas hacerlo a mi lado.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
                 <div class="card h-100 text-center p-4">
+                    <img src="futuro.jpeg" class="card-img-top rounded mb-3" alt="Apoyo" style="height: 220px; object-fit: cover;">
                     <div class="card-body">
-                        <img src="familia.jpeg" alt="Foto con familia." style="height: 200px; object-fit: cover;">
-                        <h4 class="card-title">Parte de la Familia</h4>
-                        <p class="card-text">Es especial hasta en mi casa. Un plan no está completo si ella no vienes, y mi familia disfruta su presencia tanto como yo.</p>
+                        <h4 class="fuente-romantica">Mi Apoyo Incondicional</h4>
+                        <p class="card-text">Has estado conmigo en mis peores momentos, dándome fuerza y recordándome que no estoy solo. Cambiaste por completo mi perspectiva de lo que significa amar de verdad.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="500">
                 <div class="card h-100 text-center p-4">
+                    <img src="matrimonio.jpeg" class="card-img-top rounded mb-3" alt="Futuro" style="height: 220px; object-fit: cover;">
                     <div class="card-body">
-                        <img src="futuro.jpeg" alt="Futuro." style="height: 200px; object-fit: cover;">
-                        <h4 class="card-title">Futuro Juntos</h4>
-                        <p class="card-text">Es de las pocas personas con las que pienso a largo plazo. Todo lo que quiero lograr, quiero que sea contigo ahí, celebrando a mi lado.</p>
+                        <h4 class="fuente-romantica">Nuestro Futuro</h4>
+                        <p class="card-text">Todo lo que quiero lograr, quiero que estés ahí para celebrarlo. Y de la misma forma, prometo estar en primera fila aplaudiendo cada uno de tus éxitos. Somos un equipo. Asi como tu lo has hecho.</p>
                     </div>
                 </div>
             </div>
@@ -119,18 +164,33 @@
     </section>
 
     <footer class="bg-white text-center py-5 mt-4">
-        <div class="container">
-            <p class="fs-5">
-                "Su ausencia me hace sentir triste y vacío, pero una simple foto suya hace que mi corazón lata como el primer día."
-            </p>
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4">Te amo muchísimo ❤️</h2>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true,     
+            offset: 100     
+        });
+
+        const corazones = ['❤️', '💖', '💕', '✨'];
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart-fall');
+            heart.innerHTML = corazones[Math.floor(Math.random() * corazones.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+            
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 7000);
+        }
+        setInterval(createHeart, 600);
+    </script>
 </body>
-
 </html>
-
-
-
-
